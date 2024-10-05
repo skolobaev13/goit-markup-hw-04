@@ -81,14 +81,14 @@ header {
   color: #2e2f42;
   padding: 24px 0;
   position: relative;
+  transition-property: color, background-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu:hover {
   color: #404bbf;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu:focus {
   color: #404bbf;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu:active::after {
   content: "";
@@ -141,6 +141,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  max-width: 1440px;
 }
 .main-text {
   font-family: "Roboto", sans-serif;
@@ -171,15 +172,15 @@ header {
   border-radius: 4px;
   margin: auto;
   margin-top: 48px;
+  transition-property: background-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
   background-color: #404bbf;
-  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:focus {
   background-color: #404bbf;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .second-section {
   padding: 120px 0;
@@ -266,6 +267,7 @@ header {
   justify-content: center;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 .name-container {
   padding: 32px 0;
@@ -287,6 +289,22 @@ header {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  margin-bottom: 8px;
+}
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 24px;
+}
+.social-icon svg {
+  --color1: #4d5ae5;
+  --color2: #f4f4fd;
+  transition: fill 250ms ease-in-out cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon svg:hover {
+  --color1: #404bbf;
 }
 .four-section {
   padding: 120px 0;
@@ -301,7 +319,46 @@ header {
 }
 .five-li {
   width: calc((100% - 48px) / 3);
+  position: relative;
+  overflow: hidden;
 }
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  background-color: #4d5ae5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: opacity 250ms ease-in-out;
+}
+.overlay p {
+  display: none;
+}
+
+.five-li:hover .overlay {
+  transform: translateY(0%);
+  height: 300px;
+  width: 100%;
+  transition: height 0.3s ease-in-out;
+}
+.five-li:hover .overlay p {
+  display: block;
+}
+
 .app-container {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -338,6 +395,7 @@ header {
   background-color: #2e2f42;
   padding: 100px 0;
   margin: auto;
+  max-height: 312px;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -361,4 +419,26 @@ header {
   color: #f4f4fd;
   display: flex;
   max-width: 264px;
+}
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /margin: 16px 0;
+}
+.social-media {
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
