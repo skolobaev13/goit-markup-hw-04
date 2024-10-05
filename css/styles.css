@@ -73,7 +73,10 @@ header {
   display: flex;
   gap: 40px;
 }
-.studio:active::after {
+.studio {
+  color: #404bbf;
+}
+.studio::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -139,7 +142,7 @@ header {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1.jpg);
+    url(../images/img-name.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
