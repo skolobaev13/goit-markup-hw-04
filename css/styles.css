@@ -425,7 +425,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /margin: 16px 0;
 }
 .social-media {
   margin-bottom: 16px;
